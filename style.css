@@ -24,12 +24,38 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--bg-color);
     transition: var(--transition);
     overflow-x: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.font-montserrat {
+    font-family: 'Poppins', sans-serif;
+}
+
+.font-lato {
+    font-family: 'Poppins', sans-serif;
+}
+
+.font-nunito {
+    font-family: 'Poppins', sans-serif;
+}
+
+.font-bebas-neue {
+    font-family: 'Poppins', sans-serif;
 }
 
 #particles-js {
@@ -82,7 +108,7 @@ nav .container {
 .nav-items a {
     text-decoration: none;
     color: var(--text-color);
-    transition: var(--transition);
+    transition: color 0.3s ease, transform 0.3s ease;
     position: relative;
 }
 
@@ -104,6 +130,7 @@ nav .container {
 .nav-items a:hover {
     color: var(--primary-color);
     text-shadow: 0 0 5px var(--glow-color);
+    transform: translateY(-3px);
 }
 
 #theme-toggle {
@@ -112,12 +139,12 @@ nav .container {
     color: var(--text-color);
     cursor: pointer;
     font-size: 1.2rem;
-    transition: var(--transition);
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 #theme-toggle:hover {
     color: var(--primary-color);
-    transform: rotate(180deg);
+    transform: rotate(180deg) scale(1.1);
 }
 
 .menu-btn {
@@ -125,6 +152,11 @@ nav .container {
     font-size: 1.5rem;
     cursor: pointer;
     color: var(--text-color);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-btn:hover {
+    transform: rotate(90deg);
 }
 
 /* Hero Section */
@@ -150,6 +182,18 @@ nav .container {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     line-height: 1.2;
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .highlight {
@@ -179,7 +223,7 @@ nav .container {
     padding: 1rem 2rem;
     border-radius: 5px;
     text-decoration: none;
-    transition: var(--transition);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     font-weight: 500;
 }
 
@@ -195,7 +239,7 @@ nav .container {
 }
 
 .cta-button:hover {
-    transform: translateY(-2px);
+    transform: translateY(-5px);
     box-shadow: 0 5px 15px var(--shadow-color),
                 0 0 20px var(--glow-color);
 }
@@ -275,7 +319,7 @@ nav .container {
     padding: 2rem;
     border-radius: 10px;
     text-align: center;
-    transition: var(--transition);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-card:hover {
@@ -299,6 +343,7 @@ nav .container {
     background: var(--bg-color);
     border-radius: 4px;
     overflow: hidden;
+    position: relative;
 }
 
 .level-bar {
@@ -306,6 +351,10 @@ nav .container {
     background: var(--primary-color);
     border-radius: 4px;
     transition: width 1s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0; /* Initially set to 0 to animate on scroll */
 }
 
 /* Projects Section */
@@ -323,7 +372,7 @@ nav .container {
     background: var(--card-bg);
     border-radius: 10px;
     overflow: hidden;
-    transition: var(--transition);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
@@ -413,12 +462,12 @@ nav .container {
     border-radius: 5px;
     cursor: pointer;
     font-weight: 500;
-    transition: var(--transition);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .submit-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px var(--shadow-color),
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px var (--shadow-color),
                 0 0 20px var(--glow-color);
 }
 
@@ -432,12 +481,12 @@ nav .container {
 .social-icon {
     font-size: 1.5rem;
     color: var(--text-color);
-    transition: var(--transition);
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-icon:hover {
     color: var(--primary-color);
-    transform: translateY(-3px);
+    transform: translateY(-5px);
     text-shadow: 0 0 10px var(--glow-color);
 }
 

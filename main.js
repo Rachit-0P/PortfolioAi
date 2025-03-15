@@ -20,10 +20,9 @@ menuBtn.addEventListener('click', () => {
 // Typed.js
 const typed = new Typed('#typed-text', {
     strings: [
-        'AI Developer',
-        'Machine Learning Engineer',
-        'Data Scientist',
-        'Problem Solver'
+        'Graphics Designer',
+        'Thumbnail Designer',
+        'Video Editor'
     ],
     typeSpeed: 50,
     backSpeed: 30,
