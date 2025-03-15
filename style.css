@@ -42,7 +42,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Ensure it is behind other content */
+    z-index: 0; /* Changed from -1 to 0 */
 }
 
 .container {
@@ -354,7 +354,7 @@ nav .container {
 
 .submit-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px var(--shadow-color),
+    box-shadow: 0 5px 15px var (--shadow-color),
                 0 0 20px var(--glow-color);
 }
 
