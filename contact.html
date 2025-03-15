@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ...existing code... -->
+    <style>
+        /* Add some styles for the new contact section */
+        .contact-section {
+            padding: 50px;
+            background: #f4f4f4;
+            text-align: center;
+        }
+        .contact-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .contact-section form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact-section input, .contact-section textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-section button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            background: #4a90e2;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .contact-section button:hover {
+            background: #f06;
+        }
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .contact-section input, .contact-section textarea {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ...existing code... -->
+    <div class="contact-section">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    <!-- ...existing code... -->
+</body>
+</html>
